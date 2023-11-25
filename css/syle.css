@@ -5,16 +5,22 @@
 :root{
     --max-width:59px;
 }
+.main{
+    display: flex;
+    justify-content: space-between;
+
+}
 
 #navbar{
     display: flex;
     align-items: center;
+    justify-content: center;
     position: sticky;
     top: 0px;
 }
 #navbar::before{
     content: "";
-    background-color: antiquewhite;
+    background: transparent;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -23,26 +29,43 @@
     z-index: -1;
     opacity: 0.1;
 }
-#logo{
+
+#image{
     margin: 10px 30px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: right;
+    
 }
 #logo img{
-    height: 60px;
+    height: 10vh;
+    width: 10vh;
+    object-fit: cover;
     border-radius: 100%;
     margin: 3px 6px;
 }
-#navbar ul{
+
+#items{
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#items ul{
+    display: flex;
+    font-family: "Bree Serif", serif;
     justify-content: center;
     align-items: center;
-    font-family: "Bree Serif", serif;
     /* font-family: "Baloo Bhai", cursive; */
 }
-#navbar ul li{
+
+#items ul li{
+    justify-content: center;
+    align-items: center;
     list-style: none;
     font-size: 1.3rem;
 }
-#navbar ul li a{
+#items ul li a{
     display: inline-block;
     text-decoration: none;
     padding: 2px 20px;
@@ -50,10 +73,11 @@
     border-radius: 10px;
 }
 
-#navbar ul li a:hover{
+#items ul li a:hover{
     background-color: black;
     color: white;
 }
+
 #home{
     display: flex;
     flex-direction: column;
